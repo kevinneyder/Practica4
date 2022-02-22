@@ -34,13 +34,13 @@ public  class PaisController {
     }
 
     private void sortByValue(HashMap<String, Pais> list) {
-        System.out.println("-".repeat(84));
+        System.out.println("------------------------------------------------------------------------------------");
         System.out.printf("|%-20s|%-40s|%-20s|\n", "CLAVE", "PAIS", "CONTINENTE");
-        System.out.println("-".repeat(84));
+        System.out.println("------------------------------------------------------------------------------------");
         list.entrySet()
                 .stream()
                 .sorted(Map.Entry.comparingByValue())
                 .forEach(x -> System.out.printf("|%-20s|%-40s|%-20s|\n", x.getKey(), x.getValue().getNombre(), x.getValue().getContinente()));
-        System.out.println("-".repeat(84));
+        System.out.println("------------------------------------------------------------------------------------");
     }
 }
